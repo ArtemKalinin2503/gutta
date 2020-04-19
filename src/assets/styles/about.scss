@@ -1,0 +1,99 @@
+.about {
+  &__wrapper {
+    max-width: 1169px;
+    margin: auto;
+  }
+  &__company-wrapper {
+    display: flex;
+    margin-top: 74px;
+    @media (max-width: 1100px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @media (max-width: 880px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 45px;
+    }
+  }
+  &__title-wrapper {
+    margin-right: 157px;
+    @media (max-width: 880px) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  &__title {
+    font-family: "MonseratBold", sans-serif;
+    font-size: 32px;
+    color: black;
+    min-width: 248px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+  }
+  &__description {
+    font-family: "MoseratRegular", sans-serif;
+    font-size: 16px;
+    color: #000000;
+    max-width: 770px;
+    margin-top: 0;
+    @media (max-width: 880px) {
+      max-width: 100%;
+    }
+  }
+  &__btn-more-wrapper {
+    @media (max-width: 880px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__btn-more {
+    font-family: "MonseratSemiBold", sans-serif;
+    font-size: 14px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+    @media (max-width: 880px) {
+      margin-top: 20px;
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 14px;
+      background: url("../images/arrow-mini.svg") no-repeat;
+      background-size: contain;
+      margin-left: 10px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__full {
+    color: #000000;
+    font-family: "MoseratRegular", sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+    transition: 1s; /*Скорость перехода состояния элемента*/
+    height: 0;
+    &_activeAbout {
+      opacity:1;
+      transition: 1s;
+      height: auto;
+    }
+  }
+
+}
+
+//Для анимации перехода
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 2s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0
+}

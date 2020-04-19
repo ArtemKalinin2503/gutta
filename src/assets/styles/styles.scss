@@ -1,0 +1,44 @@
+@import "header";
+@import "slider";
+@import "about";
+@import "news";
+@import "formSubscription";
+@import "footer";
+
+.app__wrapper {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "MoseratRegular";
+  src: url("/assets/fonts/Montserrat-Regular.woff") format("woff");
+  src: url("/assets/fonts/Montserrat-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "MonseratBold";
+  src: url("/assets/fonts/Montserrat-Bold.woff") format("woff");
+  src: url("/assets/fonts/Montserrat-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "MonseratMediun";
+  src: url("/assets/fonts/Montserrat-Medium.woff") format("woff");
+  src: url("/assets/fonts/Montserrat-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "MonseratSemiBold";
+  src: url("/assets/fonts/Montserrat-SemiBold.woff") format("woff");
+  src: url("/assets/fonts/Montserrat-SemiBold.woff2") format("woff2");
+}
+
+
+
+

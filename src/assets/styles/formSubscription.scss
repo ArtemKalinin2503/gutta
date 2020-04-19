@@ -1,0 +1,219 @@
+.formSubscription {
+  &__wrapper {
+    position: relative;
+    max-width: 1169px;
+    margin: 64px auto;
+    border: 1px solid #14A5DA;
+    @media (max-width: 1100px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @media (max-width: 880px) {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    @media (max-width: 768px) {
+      margin: 30px 15px 30px 15px;
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 78px solid #14A5DA1F;
+      border-right: 78px solid transparent;
+      position: absolute;
+      left: 0;
+      right: 0;
+      @media (max-width: 768px) {
+        border-top: 48px solid #14A5DA1F;
+        border-right: 48px solid transparent;
+      }
+    }
+    &:after {
+      content: "";
+      display: block;
+      background: url("../images/RSS.svg") no-repeat;
+      background-size: contain;
+      width: 21px;
+      height: 21px;
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      @media (max-width: 768px) {
+        width: 13px;
+        height: 13px;
+        top: 8px;
+        left: 8px;
+      }
+    }
+    &.formSubscription__wrapper_form-done {
+      &:before {
+        display: none;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &__title {
+    font-family: "MonseratSemiBold", sans-serif;
+    font-size: 20px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 38px;
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+  &__form {
+    width: 100%;
+    max-width: 570px;
+    margin: 64px auto;
+    @media (max-width: 768px) {
+      margin: 35px auto;
+    }
+  }
+  &__label {
+    font-family: "MoseratRegular", sans-serif;
+    color: #000000;
+    font-size: 12px;
+  }
+  &__label-text {
+    position: absolute;
+    top: -32px;
+    left: 20px;
+  }
+  &__error {
+    position: absolute;
+    color: #E76400;
+    font-size: 12px;
+    font-family: "MoseratRegular", sans-serif;
+    top: -32px;
+    left: 20px;
+  }
+  &__form-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 15px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+  &__wrapper-input {
+    position: relative;
+    width: 50%;
+    max-width: 270px;
+    @media (max-width: 768px) {
+      width: 100%;
+      max-width: 220px;
+      margin-bottom: 25px;
+    }
+  }
+  &__wrapper-textarea {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    @media (max-width: 768px) {
+      text-align: center;
+      max-width: 220px;
+      margin-top: 0;
+    }
+  }
+  &__input {
+    width:  100%;
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #14A5DA;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: "MoseratRegular", sans-serif;
+    margin-right: 40px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:active, &:focus {
+      background: #14A5DA1F 0% 0% no-repeat padding-box;
+      outline: none;
+    }
+    &_error {
+      border: 1px solid #E76400;
+    }
+  }
+  &__textarea {
+    font-family: "MoseratRegular", sans-serif;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-sizing: border-box;
+    border: 1px solid #14A5DA;
+    min-height: 128px;
+    @media (max-width: 768px) {
+      max-width: 220px;
+    }
+    &:active, &:focus {
+      background: #14A5DA1F 0% 0% no-repeat padding-box;
+      outline: none;
+    }
+    &.formSubscription__input_error {
+      border: 1px solid #E76400;
+    }
+  }
+  &__wrapper-submit {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+  &__submit {
+    background: #14A5DA 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    font-family: "MoseratRegular", sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 270px;
+    height: 40px;
+    border: none;
+    outline: none;
+    @media (max-width: 768px) {
+      max-width: 220px;
+    }
+  }
+  &__posted {
+    font-family: "MonseratSemiBold", sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 485px;
+    @media (max-width: 768px) {
+      font-size: 12px;
+      min-height: 420px;
+    }
+    &:before {
+      content: "";
+      display: block;
+      background: url("../images/done.svg") no-repeat;
+      background-size: contain;
+      width: 60px;
+      height: 60px;
+      @media (max-width: 768px) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
